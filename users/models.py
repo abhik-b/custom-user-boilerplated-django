@@ -5,4 +5,4 @@ from django.db import models
 
 
 class CustomUser(AbstractUser):
-    pass
+    age = models.IntegerField(default=13)

@@ -1,6 +1,8 @@
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
+  your age {{user.age}}
   <p><a href="{% url 'logout' %}">logout</a></p>
+  <p><a href="{% url 'update' user.id %}">update</a><p>
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">login</a> |
